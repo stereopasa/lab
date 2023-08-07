@@ -9,5 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>‎</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      if (typeof window !== 'undefined') {
+        const { hostname, protocol } = window.location;
+        if (protocol === 'http:' && !/^(localhost|127.0.0.1)/.test(hostname)) {
+          window.location.protocol = 'https:';
+        }
+      }
+    </script>
+  </body>
 </html>
